@@ -1,0 +1,9 @@
+# .github/metadata.yaml
+description: "Algebra witnesses for Parity — the Z₂ group/field structure and z2-via-iso transport."
+topics:
+  - primitives
+  - parity
+  - algebra
+  - group
+  - field
+homepage: "https://swift-institute.org"
