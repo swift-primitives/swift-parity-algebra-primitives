@@ -30,7 +30,7 @@ extension Algebra.Field where Element == Parity {
                     combining: Parity.multiplying
                 )
             ),
-            reciprocal: { (element) throws(Algebra.Field<Parity>.Error) in
+            reciprocal: { element throws(Algebra.Field<Parity>.Error) in
                 guard element == .odd else { throw .nonInvertible }
                 return element
             }

@@ -1,6 +1,6 @@
 import Algebra_Module_Primitives
-import Parity_Primitives
 import Parity_Algebra_Primitives
+import Parity_Primitives
 import Testing
 
 // [TEST-004] Generic type uses parallel namespace pattern.
@@ -14,6 +14,7 @@ struct AlgebraModuleTests {
 
 extension AlgebraModuleTests {
     /// Parity field as scalars, Parity group as vectors.
+    ///
     /// Scalar multiplication is Parity.multiplying.
     static var parityModule: Algebra.Module<Parity, Parity> {
         let ring = Algebra.Ring<Parity>(

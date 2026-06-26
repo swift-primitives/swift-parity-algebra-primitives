@@ -22,9 +22,9 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "../swift-parity-primitives"),
-        .package(path: "../swift-algebra-primitives"),
-        .package(path: "../swift-optic-primitives"),
+        .package(url: "https://github.com/swift-primitives/swift-parity-primitives.git", branch: "main"),
+        .package(url: "https://github.com/swift-primitives/swift-algebra-primitives.git", branch: "main"),
+        .package(url: "https://github.com/swift-primitives/swift-optic-primitives.git", branch: "main"),
     ],
     targets: [
         .target(

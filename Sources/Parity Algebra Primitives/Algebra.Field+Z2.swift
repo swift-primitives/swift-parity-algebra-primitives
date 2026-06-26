@@ -1,8 +1,8 @@
 // Algebra.Field+Z2.swift
 
 public import Algebra_Field_Primitives
-public import Parity_Primitives
 public import Optic_Primitives
+public import Parity_Primitives
 
 /// Transports the canonical Z₂ field (Parity) across an isomorphism.
 ///
@@ -12,6 +12,7 @@ public import Optic_Primitives
 /// - Reciprocal: maps through iso, the one element is its own inverse,
 ///   the zero element throws `.nonInvertible`
 extension Algebra.Field {
+    /// The Z₂ field on `Element`, transported from the canonical `Parity` field across `iso`.
     @inlinable
     public static func z2(via iso: Optic.Iso<Element, Parity>) -> Self {
         return .init(
@@ -24,7 +25,7 @@ extension Algebra.Field {
                     }
                 )
             ),
-            reciprocal: { (element) throws(Algebra.Field<Element>.Error) in
+            reciprocal: { element throws(Algebra.Field<Element>.Error) in
                 guard iso.forward(element) == .odd else { throw .nonInvertible }
                 return element
             }
